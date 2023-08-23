@@ -1,30 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
-import { Button, Image, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Button, Image, SafeAreaView, ScrollView, StyleSheet, Text, View } from 'react-native';
+import MeuComponente from './componentes/MeuComponente';
+import MinMax from './componentes/MinMax';
+
 
 export default function App() {
   return (
 
     <View style={styles.container}>
-      <Text style={{ color: 'red', margin: 2 }}>
-        Faz uuuu Eliiii!
-      </Text>
-      <Image
-        source={require('./assets/fla2.jpg/',)}
-        style={{
-          width: 100,
-          height: 100,
-          padding: 130,
-          margin: 5
-        }}
-      />
-      <Image
-        source={require('./assets/flagremio.jpg/',)}
-        style={{
-          width: 100,
-          height: 100,
-          padding: 130
-        }}
-      />
+     
+      <MinMax min='10' max='20'/>
     </View>
 
   );
@@ -33,8 +18,20 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'black',
+    backgroundColor: 'white',
     alignItems: 'center',
     justifyContent: 'center',
   },
+
+  text: {
+    color: 'red',
+    margin: 2,
+    fontSize: 45
+  },
+
+  text1: {
+    color: 'white',
+    margin: 2,
+    fontSize: 35
+  }
 });
