@@ -1,15 +1,17 @@
-import { StatusBar } from 'expo-status-bar';
 import { Button, Image, SafeAreaView, ScrollView, StyleSheet, Text, View } from 'react-native';
-import MeuComponente from './componentes/MeuComponente';
-import MinMax from './componentes/MinMax';
+import MinMax from './componentes/semana01/MinMax';
+import MeuComponente from './componentes/semana02/MeuComponente';
+import NumeroAleatorio from './componentes/semana02/Numeroaleatorio';
+
 
 
 export default function App() {
   return (
 
     <View style={styles.container}>
-     
-      <MinMax min='10' max='20'/>
+      <MinMax min= {5} max= {20}/>
+      <MeuComponente/>
+      <NumeroAleatorio/>
     </View>
 
   );
@@ -29,9 +31,4 @@ const styles = StyleSheet.create({
     fontSize: 45
   },
 
-  text1: {
-    color: 'white',
-    margin: 2,
-    fontSize: 35
-  }
 });
