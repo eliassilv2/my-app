@@ -2,6 +2,9 @@ import { Button, Image, SafeAreaView, ScrollView, StyleSheet, Text, View } from 
 import MinMax from './componentes/semana01/MinMax';
 import MeuComponente from './componentes/semana02/MeuComponente';
 import NumeroAleatorio from './componentes/semana02/NumeroAleatorio';
+import Botao from './componentes/semana03/Botao';
+import Contador from './componentes/semana03/Contador';
+import DigiteSeuNome from './componentes/semana03/DigiteSeuNome';
 
 
 
@@ -9,9 +12,8 @@ export default function App() {
   return (
 
     <View style={styles.container}>
-      <MinMax min= {5} max= {20}/>
-      <MeuComponente/>
-      <NumeroAleatorio min={1} max={50}/>
+      <Contador/>
+      <DigiteSeuNome/>
     </View>
 
   );

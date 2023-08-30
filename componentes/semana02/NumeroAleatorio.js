@@ -1,4 +1,4 @@
-import { Text } from "react-native";
+import { Text, StyleSheet } from "react-native";
 
 export default function NumeroAleatorio(props) {
 
@@ -12,20 +12,13 @@ export default function NumeroAleatorio(props) {
     let message;
 
     if (num_aleatorio > min && num_aleatorio < max) {
-        message = `O número:  ${num_aleatorio}`;
+        message = `O número aleatório é:  ${num_aleatorio}`;
     } else {
         message = "Numero invalido";
     }
     return (
-        <Text style={[styles.text]}>{message}</Text>
+        <Text style={{fontSize: 30}}>{message}</Text>
     )
 }
 
-const styles = StyleSheet.create({
-
-
-    text: {
-        fontSize: 40,
-        color: 'red'
-    }
-});
+const styles = StyleSheet.create({})
