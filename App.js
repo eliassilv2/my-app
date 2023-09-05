@@ -1,36 +1,44 @@
-import { Button, Image, SafeAreaView, ScrollView, StyleSheet, Text, View } from 'react-native';
-import MinMax from './componentes/semana01/MinMax';
-import MeuComponente from './componentes/semana02/MeuComponente';
-import NumeroAleatorio from './componentes/semana02/NumeroAleatorio';
-import Botao from './componentes/semana03/Botao';
-import Contador from './componentes/semana03/Contador';
-import DigiteSeuNome from './componentes/semana03/DigiteSeuNome';
-
+import React from 'react';
+import { StyleSheet, View } from 'react-native';
+import BiscoitodaSorte from './componentes/semana04/children/BiscoitodaSorte';
+import Familia from './componentes/semana04/children/children/Familia';
+import Filho from './componentes/semana04/children/children/Filho';
 
 
 export default function App() {
   return (
-
     <View style={styles.container}>
-      <Contador/>
-      <DigiteSeuNome/>
-    </View>
 
+    <BiscoitodaSorte/>
+
+      <Familia nomeFamilia="Silva">
+        <Filho nome="Pedro" sobreNome="Silva"></Filho>
+        <Filho nome="Joao" sobreNome="Silva"></Filho>
+        <Filho nome="Davi" sobreNome="Silva"></Filho>
+        <Filho nome="Miguel" sobreNome="Silva"></Filho>
+      </Familia>
+
+
+      <Familia nomeFamilia="Figueiredo">
+        <Filho nome="Julia" sobreNome="Figueiredo"></Filho>
+        <Filho nome="Joao" sobreNome="Figueiredo"></Filho>
+        <Filho nome="Miguel" sobreNome="Figueiredo"></Filho>
+        <Filho nome="Maria" sobreNome="Figueiredo"></Filho>
+      </Familia>
+
+
+
+
+
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'white',
+    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
   },
-
-  text: {
-    color: 'red',
-    margin: 2,
-    fontSize: 45
-  },
-
 });
