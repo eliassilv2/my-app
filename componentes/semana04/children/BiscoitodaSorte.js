@@ -37,14 +37,14 @@ const BiscoitodaSorte = () => {
                     onPress={quebrarBiscoito}
                     disabled={bloquearBotao}
                     color="green"
-                    style={styles.botao}
+                    style={styles.button}
                 />
                 <Button
                     title="Reiniciar Biscoito"
                     onPress={reiniciarBiscoito}
                     disabled={!bloquearBotao}
                     color="green"
-                    style={styles.botao}
+                    style={styles.button}
                 />
             </View>
         </View>
@@ -78,10 +78,10 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         color: 'green',
     },
-    botao: {
+    button: {
         borderWidth: 2,
-        borderColor: 'blue',
-        borderRadius: 10,
+        borderColor: 'blue', 
+        borderRadius: 10, 
         paddingHorizontal: 20,
         paddingVertical: 10,
     },
