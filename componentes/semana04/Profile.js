@@ -38,7 +38,7 @@ export default function Profile({ imgUri, genero, nome, telefone, email }) {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        alignItems: 'center',
+        alignItems: 'start',
         justifyContent: 'center',
         backgroundColor: 'teal',
     },
@@ -49,13 +49,13 @@ const styles = StyleSheet.create({
         borderWidth: 2,
         borderColor: 'gray',
         borderRadius: 500,
-        padding: 20
+        padding: 50,
+        
+        
     },
 
     labelContainer: {
         flexDirection: 'row',
-        alignItems:'flex-start',
-        marginLeft: 0,
         width: '100%',
         padding: 10,
     },
