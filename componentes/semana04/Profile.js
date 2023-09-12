@@ -6,28 +6,28 @@ export default function Profile({ imgUri, genero, nome, telefone, email }) {
     return (
         <View style={styles.container}>
             <Image
-                source={{ uri: imgUri  }}
+                source={{ uri: imgUri }}
                 style={styles.img}
             />
 
             <View style={styles.labelContainer}>
-                <Text style={[styles.texto, styles.textoLabel]}>Gênero</Text>
+                <Text style={[styles.texto, styles.textoLabel]}>Gênero: </Text>
                 <Text style={styles.texto}>{genero}</Text>
             </View>
 
             <View style={styles.labelContainer}>
-                <Text style={[styles.texto, styles.textoLabel]}>Nome</Text>
+                <Text style={[styles.texto, styles.textoLabel]}>Nome: </Text>
                 <Text style={styles.texto}>{nome}</Text>
             </View>
 
 
             <View style={styles.labelContainer}>
-                <Text style={[styles.texto, styles.textoLabel]}>Telefone</Text>
+                <Text style={[styles.texto, styles.textoLabel]}>Telefone: </Text>
                 <Text style={styles.texto}>{telefone}</Text>
             </View>
 
             <View style={styles.labelContainer}>
-                <Text style={[styles.texto, styles.textoLabel]}>Email</Text>
+                <Text style={[styles.texto, styles.textoLabel]}>Email: </Text>
                 <Text style={styles.texto}>{email}</Text>
             </View>
 
@@ -40,9 +40,10 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: 'yellow',
-        margin: 20
-    }, img: {
+        backgroundColor: 'teal',
+    },
+
+    img: {
         width: 250,
         height: 250,
         borderWidth: 2,
@@ -50,18 +51,22 @@ const styles = StyleSheet.create({
         borderRadius: 500,
         padding: 20
     },
+
     labelContainer: {
         flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'space-between',
+        alignItems:'flex-start',
+        marginLeft: 0,
         width: '100%',
-        padding: 20
+        padding: 10,
     },
+
     texto: {
         fontSize: 20
     },
+
     textoLabel: {
-        color: 'gray',
-        fontWeight: 'bold'
+        color: 'white',
+        fontWeight: 'bold',
+
     }
 })
